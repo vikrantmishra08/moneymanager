@@ -1,0 +1,147 @@
+/* +++++++++++++++++++++++++++++++++++ CSS DISTORTION +++++++++++++++++++++++++++++++++++++ */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: #000;
+}
+
+h2{
+    position: absolute;
+    margin-bottom: 35%;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 900;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+
+h2:before
+{
+    content: '';
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent 0%, #000 5%, #000 100%);
+    animation: animate 5.5s linear forwards infinite;
+
+}
+@keyframes animate
+{
+    0%
+    {
+        left: 110%;
+    }
+    100%
+    {
+        left: -20%;
+    }
+}
+
+h2 span
+{
+    color: #ff022c;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++ LOGIN BOX +++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.box{
+       width:300px;
+       padding:40px;
+       position:absolute;
+       top:50%;
+       left:50%;
+       border-radius: 12%;
+       transform:translate(-50%,-50%);
+       background:#191919;
+       text-align:center;
+       box-shadow: 10px 10px 10px 10px #0ff;
+
+}
+
+.box h1{
+    color:white;
+    text-transform:uppercase;
+    font-weight:500;
+    
+}
+.box input[type="text"],.box input[type="password"]{
+ 
+   border:0;
+   background:none;
+   display:block;
+   margin:20px auto;
+   text-align:center;
+   border:2px solid #3498db;
+   padding:14px 10px;
+   width:200px;
+   outline:none;
+   color:white;
+   border-radius:24px;
+   transition:0.25s;  
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+
+    width:280px;
+    border-color:#2ecc71;
+}
+
+.box input[type="sumbit"]{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:2px solid #2ecc71;
+    padding:14px 40px;
+    outline:none;
+    color:white;
+    border-radius:24px;
+    transition:0.25s; 
+    cursor:pointer;
+
+}
+
+.box input[type="submit"]:hover{
+    background:#2ecc71;
+    border-radius: 6px;
+}
+
+h3{
+    
+    margin-top: 35%;
+    margin-left: 33%;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    transform: translate(-50%, -50%);
+    
+
+}
+
+.changecolor{
+    animation: changecolorHamkuna-Matata 3s infinite;
+}
+
+@keyframes changecolorHamkuna-Matata{
+	0%{color:#fff;}
+	25%{color:#48d80d;}
+	50%{color:yellow;}
+	100%{color:pink;}
+}
+
